@@ -1,7 +1,3 @@
-Here’s a comprehensive `README.md` file for your Huckleberry Pastry website:
-
----
-
 # **Huckleberry Pastry Website**
 
 A modern and responsive website for **Huckleberry Pastries**, a bakery offering premium pastries with the convenience of online ordering and delivery.
