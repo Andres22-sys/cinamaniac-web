@@ -103,11 +103,3 @@ Contributions are welcome! If you have ideas for improving the site or fixing is
 This project is licensed under the MIT License.
 
 ---
-
-## **Contact**
-For inquiries or feedback, reach out to:
-- **Email**: support@huckleberrypastry.com
-- **Website**: [Huckleberry Pastry](#)
-
----
-
