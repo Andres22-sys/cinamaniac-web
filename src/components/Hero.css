@@ -1,0 +1,44 @@
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("/src/assets/cinema-hero.jpg") center/cover;
+    color: #fff;
+    text-align: center;
+}
+
+.hero {
+    background-color: rgba(0, 0, 0, 0.87);
+    padding: 20px;
+    width: 100%;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: rgba(229, 9, 20, 0.8);
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.hero a:hover {
+    background-color: #ff3f3f;
+}
