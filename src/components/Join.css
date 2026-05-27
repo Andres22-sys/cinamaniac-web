@@ -1,52 +1,175 @@
 .join-section {
+    padding: 7rem 2rem;
+    background: var(--color-surface);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.join-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Left column */
+.join-benefits h2 {
+    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    color: var(--color-white);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+}
+
+.benefits-list {
+    list-style: none;
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.benefit-icon {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    height: 300px;
-    background-color: rgba(0, 0, 0, 0.49);
-    color: #fff;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background: var(--color-red-dim);
+    border: 1px solid rgba(229, 9, 20, 0.25);
+    border-radius: var(--radius-sm);
+    color: var(--color-red);
+    margin-top: 0.1rem;
 }
 
-.join-section h2 {
-    font-size: 2rem;
+.benefit-item strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 0.2rem;
 }
 
-.join-section form {
+.benefit-item p {
+    font-size: 0.9rem;
+    color: var(--color-gray-300);
+    line-height: 1.6;
+}
+
+/* Right column — form card */
+.join-form-wrap {
+    background: var(--color-surface-2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+}
+
+.join-form-wrap h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.01em;
+}
+
+.join-sub {
+    font-size: 0.88rem;
+    color: var(--color-gray-300);
+    margin-bottom: 1.75rem;
+}
+
+.join-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
+    gap: 1.25rem;
 }
 
-.join-section label {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 
-.join-section input {
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    width: 300px;
-    border: none;
-    border-radius: 5px;
+.field-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-gray-100);
+    letter-spacing: 0.02em;
 }
 
-.join-section input:focus {
+.field-group input {
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--color-white);
+    font-size: 0.95rem;
+    font-family: var(--font-sans);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
     outline: none;
+    width: 100%;
 }
 
-.join-section button {
-    font-size: 1.2rem;
-    padding: 0.8rem 1.5rem;
-    background-color: rgba(229, 9, 20, 0.8);
-    color: #fff;
+.field-group input::placeholder {
+    color: var(--color-gray-500);
+}
+
+.field-group input:focus {
+    border-color: var(--color-red);
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.18);
+}
+
+.join-submit {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--color-red);
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 700;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    font-family: var(--font-sans);
+    transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    box-shadow: 0 4px 18px rgba(229, 9, 20, 0.35);
+    margin-top: 0.25rem;
 }
 
-.join-section button:hover {
-    background-color: #ff3f3f;
+.join-submit:hover {
+    background: var(--color-red-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(229, 9, 20, 0.45);
+}
+
+.join-disclaimer {
+    font-size: 0.78rem;
+    color: var(--color-gray-500);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.join-disclaimer a {
+    color: var(--color-gray-300);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color var(--transition-fast);
+}
+
+.join-disclaimer a:hover {
+    color: var(--color-white);
+}
+
+@media screen and (max-width: 860px) {
+    .join-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
 }

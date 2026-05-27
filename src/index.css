@@ -5,6 +5,32 @@
   padding: 0;
 }
 
+/* CSS Custom Properties */
+:root {
+  --color-bg: #0d0d0d;
+  --color-surface: #181818;
+  --color-surface-2: #222222;
+  --color-red: #e50914;
+  --color-red-hover: #ff2d3b;
+  --color-red-dim: rgba(229, 9, 20, 0.15);
+  --color-white: #ffffff;
+  --color-gray-100: #f0f0f0;
+  --color-gray-300: #b0b0b0;
+  --color-gray-500: #666666;
+  --color-overlay-light: rgba(0, 0, 0, 0.5);
+  --color-overlay-dark: rgba(0, 0, 0, 0.85);
+
+  --font-sans: "Helvetica Neue", "Inter", Arial, sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --transition-fast: 0.2s ease;
+  --transition-mid: 0.3s ease;
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.5);
+  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
@@ -12,7 +38,18 @@ html {
   scrollbar-width: none;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  background-color: #141414;
-  font-family: "Helvetica Neue", sans-serif;
+  background-color: var(--color-bg);
+  font-family: var(--font-sans);
+  color: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
 }
